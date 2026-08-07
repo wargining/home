@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main class="page-shell">
@@ -25,6 +26,25 @@
             <span>💗</span>
           </div>
         </div>
+      </section>
+
+      <section class="section-block chart-section reveal" aria-labelledby="chart-title">
+        <div class="section-header chart-header">
+          <div>
+            <p class="section-kicker">🎵 Live Chart</p>
+            <h2 id="chart-title">오늘의 차트</h2>
+          </div>
+          <span id="chart-status" class="chart-status">불러오는 중</span>
+        </div>
+
+        <div class="chart-insight">
+          <span>✨ 오늘의 차트 한 줄 평</span>
+          <p id="chart-insight">AI가 차트를 분석하고 있어요.</p>
+        </div>
+
+        <ol id="chart-ranking" class="chart-ranking" aria-live="polite">
+          <li class="chart-message">TOP 10을 불러오는 중입니다.</li>
+        </ol>
       </section>
 
       <section class="section-block reveal">

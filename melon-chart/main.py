@@ -17,7 +17,7 @@ CSV_PATH = BASE_DIR / "melon_top100.csv"
 load_dotenv(BASE_DIR / ".env")
 
 app = FastAPI(
-    title="의진의 Melon Chart API",
+    title="Melon Chart API",
     description="CSV 차트 데이터와 AI 한 줄 평을 제공하는 실습용 API",
     version="1.0.0",
 )
@@ -98,7 +98,8 @@ def get_insight():
 """.strip()
 
     try:
-        response = genai.Client(api_key=api_key).models.generate_content(
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
             model=os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite"),
             contents=prompt,
         )

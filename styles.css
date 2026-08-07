@@ -105,6 +105,112 @@ body {
   font-size: 1.6rem;
 }
 
+.chart-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chart-status {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: #f3e8f8;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.chart-status.connected {
+  background: #e4f7ec;
+  color: #28784e;
+}
+
+.chart-status.failed {
+  background: #ffe7ed;
+  color: #a93a59;
+}
+
+.chart-insight {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(207, 137, 216, 0.35);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fff5fb, #f3eaff);
+}
+
+.chart-insight > span {
+  color: #bd67ae;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.chart-insight p {
+  margin: 0.45rem 0 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.chart-insight p.error {
+  color: #a93a59;
+}
+
+.chart-ranking {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chart-item {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.chart-rank {
+  color: #c26fb5;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.chart-song-info {
+  display: grid;
+  min-width: 0;
+}
+
+.chart-song-title,
+.chart-artist {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chart-song-title {
+  font-weight: 700;
+}
+
+.chart-artist {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.chart-message {
+  grid-column: 1 / -1;
+  color: var(--muted);
+}
+
+.chart-message.error {
+  color: #a93a59;
+}
+
 .interest-grid,
 .badge-list {
   display: flex;
@@ -218,6 +324,10 @@ body {
   }
 
   .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-ranking {
     grid-template-columns: 1fr;
   }
 }
