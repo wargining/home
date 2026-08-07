@@ -1,12 +1,12 @@
-# Melon Chart API + Portfolio
+# Melon Chart API
 
-`melon_top100.csv`를 JSON으로 제공하고, OpenAI API로 오늘 차트를 요약해 홈페이지에 표시하는 FastAPI 프로젝트입니다.
+`melon_top100.csv`를 JSON으로 제공하고, OpenAI API로 오늘 차트를 요약해 별도의 차트 홈페이지에 표시하는 FastAPI 프로젝트입니다.
 
 ## 실행 방법
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv ../.venv
+source ../.venv/bin/activate
 pip install -r requirements.txt
 export OPENAI_API_KEY="내_API_키"
 uvicorn main:app --reload

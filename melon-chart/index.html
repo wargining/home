@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘의 Melon TOP 100</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card">
+        <div class="hero-content hero-layout">
+          <div class="hero-text">
+            <p class="eyebrow">🎵 CSV → AI API → WEB</p>
+            <h1>오늘의 Melon TOP 100</h1>
+            <p class="intro-text">CSV 차트 데이터와 AI 분석을 한 화면에서 확인해 보세요.</p>
+          </div>
+          <div class="profile-badge" aria-hidden="true"><span>🎧</span></div>
+        </div>
+      </section>
+
+      <section class="section-block chart-section" aria-labelledby="chart-title">
+        <div class="section-header chart-heading">
+          <div>
+            <p class="section-kicker">Live API</p>
+            <h2 id="chart-title">실시간 차트 데이터</h2>
+          </div>
+          <span id="api-status" class="api-status">API 연결 중…</span>
+        </div>
+        <div class="ai-summary">
+          <span class="ai-label">✨ AI 한 줄 평</span>
+          <p id="ai-summary">오늘 차트를 분석하고 있어요…</p>
+        </div>
+        <div id="chart-list" class="chart-list" aria-live="polite">
+          <p class="loading-message">차트 데이터를 불러오는 중입니다.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

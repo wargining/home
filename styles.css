@@ -105,65 +105,6 @@ body {
   font-size: 1.6rem;
 }
 
-.chart-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.api-status {
-  padding: 0.45rem 0.75rem;
-  border-radius: 999px;
-  background: #f4eafa;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-.api-status.connected { background: #e5f8ee; color: #287a50; }
-.api-status.failed { background: #ffe8ee; color: #ad3d5b; }
-
-.ai-summary {
-  margin-bottom: 1rem;
-  padding: 1rem 1.1rem;
-  border: 1px solid rgba(207, 137, 216, 0.32);
-  border-radius: 16px;
-  background: linear-gradient(135deg, #fff3fa, #f2eaff);
-}
-
-.ai-label {
-  color: #bd67ae;
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-.ai-summary p { margin: 0.4rem 0 0; line-height: 1.65; }
-
-.chart-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.65rem;
-}
-
-.chart-row {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  min-width: 0;
-  padding: 0.85rem 1rem;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid var(--border);
-}
-
-.rank { width: 1.6rem; color: #c26fb5; font-size: 1.2rem; text-align: center; }
-.song-info { display: grid; min-width: 0; }
-.song-title, .artist { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.song-title { color: var(--text); }
-.artist { margin-top: 0.2rem; color: var(--muted); font-size: 0.8rem; }
-.loading-message, .error-message { grid-column: 1 / -1; color: var(--muted); }
-.error-message { color: #ad3d5b; }
-
 .interest-grid,
 .badge-list {
   display: flex;
@@ -279,7 +220,4 @@ body {
   .project-grid {
     grid-template-columns: 1fr;
   }
-
-  .chart-list { grid-template-columns: 1fr; }
-  .chart-heading { align-items: flex-start; }
 }
